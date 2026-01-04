@@ -1,0 +1,302 @@
+:root {
+  --primary: #3f007e;
+  --secondary: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide_scrollbar {
+  scrollbar-width: none;
+}
+
+.container {
+  padding-top: 24px;
+  padding-left: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- NAV ---------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 32px;
+}
+
+nav .left_nav {
+  display: flex;
+  width: 488px;
+  height: 40px;
+  gap: 16px;
+}
+
+nav .left_nav .logo {
+  background-color: var(--primary);
+  min-width: 160px;
+}
+
+nav .left_nav .option_container {
+  width: 312px;
+  display: flex;
+  height: 40px;
+  gap: 8px;
+}
+
+nav .left_nav .option_container a {
+  background-color: var(--primary);
+  width: 100%;
+}
+
+nav .right_nav {
+  width: 371px;
+  display: flex;
+  gap: 12px;
+}
+
+nav .right_nav .search {
+  background-color: var(--primary);
+  max-width: 319px;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 28px;
+  padding: 10px 14px;
+  gap: 10px;
+  align-items: center;
+}
+
+nav .right_nav .search div {
+  background-color: var(--secondary);
+  height: 20px;
+}
+
+nav .right_nav .search .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+nav .right_nav .search .rectangle {
+  flex-grow: 1;
+}
+
+nav .right_nav .search .square {
+  width: 20px;
+}
+
+nav .right_nav .avatar {
+  background-color: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ---------- TAGS ---------- */
+
+.tags {
+  height: 32px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 100%;
+}
+
+.tags span {
+  background-color: var(--primary);
+  min-width: 79px;
+  border-radius: 21px;
+}
+
+/* ---------- ADS ---------- */
+
+.ads {
+  height: 321px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 100%;
+}
+
+.ads span {
+  background-color: var(--primary);
+  min-width: 489px;
+}
+
+.button_relative {
+  position: relative;
+}
+
+.slide_button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.slide_button div {
+  background-color: var(--secondary);
+  width: 64px;
+  height: 56px;
+  border-radius: 18px;
+}
+
+/* ---------- BAR ---------- */
+
+.bar {
+  background-color: var(--primary);
+  height: 40px;
+  width: 285px;
+}
+
+/* ---------- CARDS ---------- */
+
+.cards {
+  height: 133px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 100%;
+}
+
+.cards .card {
+  background-color: var(--primary);
+  min-width: 388px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 12px;
+}
+
+.cards .card .card_top {
+  height: 80px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cards .card .card_top .heading {
+  background-color: var(--secondary);
+  height: 16px;
+  width: 100%;
+}
+
+.cards .card .card_top .box_container {
+  height: 16px;
+  width: 77px;
+  display: flex;
+  gap: 5px;
+}
+
+.cards .card .card_top .box_container .box1 {
+  background-color: var(--secondary);
+  width: 24px;
+}
+
+.cards .card .card_top .box_container .box2 {
+  background-color: var(--secondary);
+  width: 48px;
+}
+
+.cards .card .card_top .content {
+  background-color: var(--secondary);
+  height: 16px;
+  width: 100%;
+}
+
+.cards .card hr {
+  background-color: var(--secondary);
+}
+
+.cards .card .card_bottom {
+  height: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card .card_bottom .left_bottom {
+  background-color: var(--secondary);
+  height: 12px;
+  width: 80px;
+}
+
+.cards .card .card_bottom .right_bottom {
+  width: 202px;
+  height: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.cards .card .card_bottom .right_bottom span {
+  background-color: var(--secondary);
+  width: 97px;
+  height: 12px;
+}
+
+/* ---------- GRID BOXES ---------- */
+
+.grid_boxes {
+  height: 324px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 100%;
+}
+
+.grid_boxes .grid_box {
+  background-color: var(--primary);
+  height: 324px;
+  min-width: 387px;
+  display: grid;
+  gap: 8px;
+  padding: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid_boxes .grid_box span {
+  background-color: var(--secondary);
+}
+
+/* ---------- AUTO LAYOUT ---------- */
+
+@media screen and (max-width: 1000px) {
+  nav {
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding-right: 12px;
+  }
+
+  nav .left_nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  nav .right_nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .container {
+    padding-top: 8px;
+    padding-left: 12px;
+    gap: 12px;
+  }
+}
