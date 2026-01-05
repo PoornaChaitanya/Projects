@@ -43,7 +43,8 @@ h4 {
   line-height: 32px; */
 }
 
-p {
+p,
+li {
   font-family: var(--primaryFont);
   font-size: 16px;
   line-height: 28px;
@@ -223,3 +224,73 @@ nav a:hover {
   max-width: 750px;
 }
 
+/* PROJECT SECTION */
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 122px 80px;
+  gap: 63px;
+  list-style-position: inside;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(222, 243, 223, 1);
+  border-radius: 8px;
+  padding: 63px 50px;
+  display: flex;
+  gap: 41px;
+}
+
+.p-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: var(--green);
+}
+
+.title .number {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--light);
+  background-color: var(--green);
+  color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.key-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.p-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.technology {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
