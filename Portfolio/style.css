@@ -1,4 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --bg-primary: #000;
+  --bg-secondary: #191919;
+  --green: #def3df;
+  --light: #fff;
+  --primaryFont: "Inter", sans-serif;
+  --secondaryFont: "Roboto", sans-serif;
+}
 
 * {
   margin: 0;
@@ -6,26 +15,211 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: "Roboto", sans-serif;
+  background: var(--bg-primary);
+  color: var(--light);
 }
 
 h1 {
   font-size: 85px;
+  font-family: var(--secondaryFont);
 }
 
 h2 {
   font-size: 48px;
+  font-family: var(--secondaryFont);
 }
 
 h3 {
   font-size: 24px;
+  font-family: var(--secondaryFont);
 }
 
 h4 {
   font-size: 18px;
+  font-family: var(--primaryFont);
+  /* font-weight: 700;
+  line-height: 32px; */
 }
 
 p {
+  font-family: var(--primaryFont);
   font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
 }
+
+button {
+  font-family: var(--primaryFont);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 12px 24px;
+  background-color: var(--green);
+  width: fit-content;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  background: var(--bg-secondary);
+  height: 700px;
+  display: flex;
+}
+
+nav {
+  min-width: 276px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--light);
+  font-family: var(--primaryFont);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30%;
+}
+
+nav a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.linkedin img {
+  height: 50px;
+  width: 50px;
+}
+
+/* HEADER SECTION */
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  padding-top: 54px;
+  padding-left: 110px;
+  gap: 109px;
+}
+
+.head-btn {
+  display: flex;
+  justify-content: end;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.details .intro {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.details .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.details h4:last-child {
+  font-weight: 400;
+}
+
+/* ABOUT SECTION */
+
+.about-section {
+  height: 600px;
+  display: flex;
+  margin: 140px 80px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.about-content p {
+  margin-top: 30px;
+  margin-bottom: 44px;
+}
+
+/* EXPERIENCE SECTION */
+
+.experience-section {
+  background-color: var(--bg-secondary);
+  color: var(--green);
+  height: 1395px;
+  display: flex;
+  flex-direction: column;
+  padding: 121px 80px;
+  align-items: center;
+}
+
+.experience-section h2 {
+  margin-bottom: 51px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-bottom: 64px;
+  width: 100%;
+}
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 268px;
+  width: 100%;
+  padding: 48px 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(222, 243, 223, 1);
+  background-color: var(--bg-primary);
+  gap: 12px;
+}
+
+.experience-card .tag {
+  font-family: var(--primaryFont);
+  font-size: 13px;
+  font-weight: 700;
+  background-color: var(--green);
+  color: var(--bg-primary);
+  padding: 8px 16px;
+  border-radius: 9999px;
+}
+
+.experience-card p {
+  margin-top: 20px;
+  color: var(--light);
+  max-width: 750px;
+}
+
