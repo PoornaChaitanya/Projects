@@ -31,7 +31,8 @@ h2 {
   font-family: var(--secondaryFont);
 }
 
-h3 {
+h3,
+a {
   font-size: 24px;
   font-family: var(--secondaryFont);
 }
@@ -39,8 +40,8 @@ h3 {
 h4 {
   font-size: 18px;
   font-family: var(--primaryFont);
-  /* font-weight: 700;
-  line-height: 32px; */
+  font-weight: 700;
+  line-height: 40px;
 }
 
 p,
@@ -67,6 +68,7 @@ button {
   background: var(--bg-secondary);
   height: 700px;
   display: flex;
+  overflow: hidden;
 }
 
 nav {
@@ -117,6 +119,8 @@ nav a:hover {
   padding-top: 54px;
   padding-left: 110px;
   gap: 109px;
+  position: relative;
+  overflow: hidden;
 }
 
 .head-btn {
@@ -144,6 +148,12 @@ nav a:hover {
 
 .details h4:last-child {
   font-weight: 400;
+}
+
+.hero-section .background {
+  position: absolute;
+  top: -200px;
+  left: 300px;
 }
 
 /* ABOUT SECTION */
@@ -293,4 +303,57 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+/* SKILL SECTION */
+
+.skill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  background-color: var(--bg-secondary);
+  display: flex;
+  padding: 80px 80px;
+  gap: 115px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container img {
+  height: 400px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.linkedin-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.linkedin-container a {
+  text-decoration: none;
+  color: var(--light);
+  display: flex;
+}
+
+.linkedin-container a:visited {
+  text-decoration: none;
 }
