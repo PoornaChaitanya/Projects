@@ -30,11 +30,23 @@ body {
   background-color: var(--container-bg);
   padding: 2.5rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 330px var(--shadow-color);
+  box-shadow: 0 10px 30px var(--shadow-color);
   text-align: center;
   max-width: 400px;
   width: 90%;
   border: 1px solid var(--border-color);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .icon-container {
@@ -68,10 +80,12 @@ p {
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-secondary);
+  pointer-events: none;
 }
 
 input {
   width: 100%;
+  color: var(--text-primary);
   padding: 0.85rem 0.85rem 0.85rem 2.5rem;
   background-color: var(--input-bg);
   border: 1px solid var(--border-color);
@@ -91,11 +105,16 @@ input::placeholder {
   opacity: 0.7;
 }
 
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--input-bg) inset;
+  -webkit-text-fill-color: var(--text-primary);
+}
+
 button {
   width: 100%;
   padding: 0.85rem;
   background-color: var(--primary-color);
-  color: black;
+  color: #000;
   font-size: 1rem;
   font-weight: 500;
   border: none;
@@ -113,23 +132,28 @@ button:hover {
   transform: translateY(-2px);
 }
 
-button i{
+button:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button i {
   font-size: 0.9rem;
   transition: transform 0.3s ease;
 }
 
-button:hover i{
+button:hover i {
   transform: translateX(3px);
 }
 
-.benefits{
+.benefits {
   margin-top: 1.5rem;
   text-align: left;
-  border-top:1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
   padding-top: 1.5rem;
 }
 
-.benefit-item{
+.benefit-item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -137,13 +161,13 @@ button:hover i{
   font-size: 0.9rem;
 }
 
-.benefit-item i{
+.benefit-item i {
   color: var(--secondary-color);
   font-size: 0.8rem;
 }
 
-@media (max-width: 500px){
-  .signup-container{
+@media (max-width: 500px) {
+  .signup-container {
     padding: 2rem 1.5rem;
   }
 }
